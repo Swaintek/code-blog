@@ -1,5 +1,5 @@
 var articleConstructor = function (data, num) {
-  $('article:first').clone().appendTo('main');
+  $('article:first').removeAttr('class').removeAttr('id').clone().appendTo('main');
   $('article:last').addClass(data.category).attr('id', num);
   $('article#'+num+' .title').text(data.title);
   $('article#'+num+' .author').text(data.author);

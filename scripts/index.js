@@ -42,3 +42,10 @@ $(function() {
 
 
 })
+
+blog.truncateArticles = function() {
+  $('article .postBody p:not(:first-child)').hide();
+  event.preventDefault();
+  #(this).parent().find('p:not(:first-child)').show();
+};
+}

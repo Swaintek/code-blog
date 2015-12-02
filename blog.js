@@ -5,7 +5,6 @@ rawData.sort(function (a, b) {
   if (a.publishedOn > b.publishedOn) {
     return -1;
   }
-  // a must be equal to b
   return 0;
 });
 

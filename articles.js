@@ -1,10 +1,10 @@
-var articleConstructor = function (data) {
-  $('article').addClass(data.category).attr('active', 'yes');
-  $('.title').text(data.title);
-  $('.author').text(data.author);
-  $('.body').html(data.body);
-  $('.age').text(Math.floor((new Date - new Date(data.publishedOn))/86400000) + ' Days Old');
+var articleConstructor = function (data, num) {
+  $('article:first').clone().appendTo('main');
+  $('article:last').addClass(data.category).attr('id', num);
+  $('article#'+num+' .title').text(data.title);
+  $('article#'+num+' .author').text(data.author);
+  $('article#'+num+' .body').html(data.body);
+  $('article#'+num+' .age').text(Math.floor(
+    (new Date - new Date(data.publishedOn))/86400000) + ' Days Old'
+  );
 };
-
-
-articleConstructor(rawData[0]);

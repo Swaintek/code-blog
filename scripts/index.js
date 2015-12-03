@@ -49,3 +49,5 @@ blog.truncateArticles = function() {
   #(this).parent().find('p:not(:first-child)').show();
 };
 }
+
+add normalize to CSS files

@@ -35,14 +35,18 @@ $(function () {
     event.preventDefault();
     $(this).prev().children('.hide').toggle();
   });
+
   $('#categories').change(function() {
-    $('article').show();
     var $selectedCat = $('#categories').find(':selected').text();
-    $('article').not('.'+$selectedCat).hide();
-  });
-  $('#authors').change(function() {
-    $('article').show();
     var $selectedAuth = $('#authors').find(':selected').text().replace(/\s/g, '');
-    $('article').not('.'+$selectedAuth).hide();
+    $('article').hide();
+    $('.'+$selectedCat+'.'+$selectedAuth).show();
+  });
+
+  $('#authors').change(function() {
+    var $selectedCat = $('#categories').find(':selected').text();
+    var $selectedAuth = $('#authors').find(':selected').text().replace(/\s/g, '');
+    $('article').hide();
+    $('.'+$selectedCat+'.'+$selectedAuth).show();
   });
 });

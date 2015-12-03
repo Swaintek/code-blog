@@ -31,6 +31,8 @@ var blogConstructor = function () {
 blogConstructor();
 
 $(function () {
+  $('#bio').hide();
+
   $('article a').on('click', function() {
     event.preventDefault();
     $(this).prev().children('.hide').toggle();
@@ -48,5 +50,9 @@ $(function () {
     var $selectedAuth = $('#authors').find(':selected').text().replace(/\s/g, '');
     $('article').hide();
     $('.'+$selectedCat+'.'+$selectedAuth).show();
+  });
+
+  $('#about').on('click', function() {
+    $('#bio').toggle();
   });
 });

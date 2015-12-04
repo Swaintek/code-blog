@@ -5,6 +5,11 @@
     <title>SkyNet Is Winning</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script id="articleTemplate" type="text/x-handlebars-template">
+            <h1 class="title">{{title}}</h1>
+            <h2 class="author">{{author}}</h2>
+            <section class="body">{{{body}}}</section>
+          </script>
   </head>
 
   <body>
@@ -30,13 +35,11 @@
     </section>
 
     <main>
-      <article>
-        <h1 class="title">Title</h1>
-        <h2 class="author">Author</h2>
-        <section class="body">Body</section>
-        <a href=#>Expand/Collapse</a>
-        <h3 class="age">Age</h3>
-      </article>
+        <article>
+          <div class="articlePlaceholder"></div>
+          <a href=#>Expand/Collapse</a>
+          <h3 class="age">Age</h3>
+        </article>
     </main>
 
     <footer>
@@ -44,6 +47,7 @@
       <a href=#>Twitter</a>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script src="jquery-1.11.3.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="articles.js"></script>

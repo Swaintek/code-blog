@@ -11,6 +11,7 @@ rawData.sort(function (a, b) {
 var blogConstructor = function () {
   var authors = [];
   var categories = [];
+  // articleConstructor(rawData[0], 0);
   for (var i = 0; i < rawData.length; i++) {
     authors.push(rawData[i].author);
     categories.push(rawData[i].category);

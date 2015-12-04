@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <script id="articleTemplate" type="text/x-handlebars-template">
-            <h1 class="title">{{title}}</h1>
-            <h2 class="author">{{author}}</h2>
-            <section class="body">{{{body}}}</section>
+              <h1 class="title">{{title}}</h1>
+              <a class="author" href={{{authorURL}}}>{{author}}</a>
+              <h2 class="age">{{age}}</h2>
+              <article class="body">{{{body}}}</article>
+              <a class="expand" href=#>Show More/Less</a>
           </script>
   </head>
 
@@ -17,29 +19,29 @@
     <header>SkyNet Is Winning</header>
 
     <nav>
+
       <section class="filter">Categories
         <select id="categories">
           <option value="all">All</option>
         </select>
       </section>
+
       <section class="filter">Authors
         <select id="authors">
           <option value="all">All</option>
         </select>
       </section>
-      <a href=#>Home</a>
+
+      <a id="home" href=#>Home</a>
+
       <a id="about" href=#>About</a>
+
     </nav>
-    <section id="bio">
-      <p>Here is my bio</p>
-    </section>
+
+    <section class="bioPlaceholder">Here's my Bio</section>
 
     <main>
-        <article>
-          <div class="articlePlaceholder"></div>
-          <a href=#>Expand/Collapse</a>
-          <h3 class="age">Age</h3>
-        </article>
+        <section class="articlePlaceholder"></section>
     </main>
 
     <footer>

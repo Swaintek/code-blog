@@ -31,7 +31,7 @@ img {
   max-width: 100%;
 }
 
-article {
+main > section {
   display: flex;
   justify-content: space-between;
   flex-flow: column;

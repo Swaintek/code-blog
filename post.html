@@ -24,7 +24,7 @@
     <main>
 
       <section>
-        <form class="" action="index.html" method="post">
+        <form class="newPost" action="index.html" method="post">
           <p>Title:
             <input type="text" name="title" />
           </p>
@@ -37,11 +37,19 @@
           <p>Category:
             <input type="text" name="category" />
           </p>
-          <p>Body:</p>
-          <textarea name="body">Type article here.</textarea>
+          <p>Body:
+            <textarea name="body">Type article here.</textarea>
+          </p>
         </form>
       </section>
-
+      <section class="previewPost">
+        <article class="post">
+          <h1 class="title"></h1>
+          <p class="author"></p>
+          <p class="category"></p>
+          <div class="body"></div>
+        </article>
+      </section>
     </main>
 
     <footer>
@@ -50,9 +58,12 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"></script>
     <script src="jquery-1.11.3.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="articles.js"></script>
+    <script type="text/javascript" src="post.js"></script>
     <script src="blog.js"></script>
 
   </body>

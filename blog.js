@@ -65,4 +65,6 @@ $(function () {
     event.preventDefault();
     $('.bioPlaceholder').toggle();
   });
+//initialize HighlightJS
+  hljs.initHighlightingOnLoad();
 });

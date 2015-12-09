@@ -4,8 +4,8 @@ body, form {
   padding: 0;
 }
 
-
-header {
+/*layout rules*/
+#header {
   display: flex;
   justify-content: center;
   margin: 5% 5% 5% 5%;
@@ -14,7 +14,16 @@ header {
   text-align: center;
 }
 
-nav {
+#footer {
+  display: flex;
+  justify-content: center;
+  margin: 5% 5% 5% 5%;
+  border: solid black;
+  text-align: center;
+}
+
+/*Module Rules*/
+#nav {
   display: flex;
   justify-content: space-around;
   flex-flow: column;
@@ -24,13 +33,15 @@ nav {
   margin: 1% 1% 1% 1%;
 }
 
-nav > * {
+#nav > * {
   text-align: left;
   min-width: 20%;
   border: solid black;
   margin: 1% 1% 1% 1%;
   padding: .5% .5% .5% .5%;
 }
+
+.articlePlaceholder {}
 
 img {
   display: block;
@@ -49,7 +60,9 @@ main > section {
 }
 
 @media all and (min-width: 750px) {
-  nav, nav > * {
+  #nav, #nav > * {
     text-align: center;
     flex-direction: row;
   }
+
+/*State Rules*/
